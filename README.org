@@ -13,6 +13,8 @@ I wanted to have a cyrillic equivalent of Colemak that I can use, with the follo
 
 I decided to use Microsoft Keyboard Layout Creator under Windows. Other implementations may come latter (contributors welcome).
 
+Source file [[Cyrillic.klc]] is included for people that want to play with different layout versions. I don't care for DH, Wide, Angle ... but everyone is free to adapt for its needs.
+
 ** Base Cyrillic
 
 For the majority of cyrillic letters, it is easy. Just replace latin equivalent with the cyrillic one: ~a~ -> ~а~, ~b~ -> ~б~, ~v~ -> ~в~, ...
@@ -35,7 +37,7 @@ After adding Serbian support, I realised that I could just extend the layout so 
 
 ** Russian
 
-Russian has also some extra letters. As oposed to Serbian, it has some letters that are pronounced as two letters, starting with. For exmaple ~Ю~ pronounced as ~ju~ or ~Я~ as ~ja~. I wollowed the principle to map them as an AltGr + the base sound.
+Russian has also some extra letters. As oposed to Serbian, it has some letters that are pronounced as two letters, starting with. For exmaple ~Ю~ pronounced as ~ju~ or ~Я~ as ~ja~. I followed the principle to map them as an AltGr + the base sound.
 
 - ~Ю, Я, Ё~ - it became ~AltGr~ + ~u, a, o~ respectively. Easy to remember
 - ~Й~ went to ~AlgGr + J~ using the same phonetical principle. If I were a native Russian speaker, I would probably map it directly to ~J~, but since Serbian and other languages need ~J~, Russians will have to deal with it.
@@ -58,3 +60,11 @@ That was easy too. Since I alreday added ~Ѕ~ in Serbian, there were only two le
 ** Others
 
 I'm open to add mappings for other cyrillic languages, given that the same princples are followed, and that it doesn't require changes to the existing languages.
+
+** Screenshots
+
+Here's how the layout actually looks like. For brevity only capital letters, small letters are located at the same position.
+
+[[SR_ColemShft.jpg]]
+[[SR_ColemShftAltGr.jpg]]
+
