@@ -1,12 +1,12 @@
 * colemak-cyrillic
 
-Cyrillic Colemak variant supporting Serbian, Russian, Bulgarian and  Macedonian language
+Cyrillic Colemak keyboard layout variant supporting Serbian, Russian, Bulgarian, and  Macedonian language
 
 * Motivation
 
-I wanted to have a cyrillic equivalent of Colemak that I can use, with the following limitations:
+I wanted to have a Cyrillic equivalent of Colemak that I can use, with the following limitations:
 
-- All special keys should stay where they are in standard Colemak layout. Only latin keys are rempped. I don't want to remap ~.~ to something, and then having to chase it in the keyboard.
+- All special keys should stay where they are in the standard Colemak layout. Only Latin keys are remapped. I would rather not remap ~.~ or ~;~ to something, and then having to chase for it on the keyboard.
 - No dead keys. This is a personal preference, I just don't like key compos for something that should be one letter.
 
 * Implementation
@@ -17,54 +17,57 @@ Source file [[Cyrillic.klc]] is included for people that want to play with diffe
 
 ** Base Cyrillic
 
-For the majority of cyrillic letters, it is easy. Just replace latin equivalent with the cyrillic one: ~a~ -> ~а~, ~b~ -> ~б~, ~v~ -> ~в~, ...
+For the majority of Cyrillic letters, it is easy. Just replace Latin equivalent with the Cyrillic one: ~a~ -> ~а~, ~b~ -> ~б~, ~v~ -> ~в~, ...
 
 ** Serbian
 
-Serbian language has some additional letters, that are not covered by these simle latin equivalents. Mainly I tried to follow a phonetic principle and put those extra letter on the letters they are most similar to. I ended up with the following:
+Serbian language has some additional letters, that are not covered by these simple Latin equivalents. Mainly, I tried to follow a phonetic principle and put those extra letters on the letters they are most similar to. I ended up with the following:
 
-- ~Ђ~ - it comes after cyrillic ~д~, has the same base, so I put it as ~AltGr - D~
-- ~Ж~ - ditto, but for ~з~, it went to ~AltGr - Z~
-- ~Љ~ - ~AltGr - L~. In addition to that it went to replace ~Q~, since that's where it located in standard serbian keyboard.
+- ~Ђ~ - it comes after Cyrillic ~д~, has the same base, so I put it as ~AltGr + D~
+- ~Ж~ - ditto, but for ~з~, it went to ~AltGr + Z~
+- ~Љ~ - ~AltGr - L~. In addition to that, it went to replace ~Q~, since that's where it located in standard Serbian keyboard.
 - ~Њ~ - ~AltGr + N~ and ~W~, for the same reasons as above.
 - ~Ч~ - ~AltGr + C~
-- ~Ћ~ - ~AltGr + T~ - not a happiest choice, but ~C~ war already taken
+- ~Ћ~ - ~AltGr + T~ - not the happiest choice, but ~C~ war already taken
 - ~Џ~ - went directly to ~X~ position
 - ~Ш~ - ~AltGr + S~
-- ~Ѕ~ - ok, strictly speaking this letter doesn't exist in Serbian, but my local dialect has it, so I added it to the same place it was already there in some keyboard layouts, replacing ~Y~
+- ~Ѕ~ - OK, strictly speaking, this letter doesn't exist in Serbian, but my local dialect has it, so I added it to the same place it was already there in some keyboard layouts, replacing ~Y~
 
-After adding Serbian support, I realised that I could just extend the layout so I can also type in othre cyrillic based languages, so decided to just do it.
+After adding Serbian support, I realised that I could just extend the layout, so I can also type in other Cyrillic-based languages, so decided to just do it.
 
 ** Russian
 
-Russian has also some extra letters. As oposed to Serbian, it has some letters that are pronounced as two letters, starting with. For exmaple ~Ю~ pronounced as ~ju~ or ~Я~ as ~ja~. I followed the principle to map them as an AltGr + the base sound.
+Russian also has some extra letters. Unlike Serbian, it has some letters that are pronounced as two sounds, starting with the sound ~j~ . For example, ~Ю~ pronounced as ~ju~ or ~Я~ as ~ja~. I followed the principle to map them as an ~AltGr + the base sound~.
 
 - ~Ю, Я, Ё~ - it became ~AltGr~ + ~u, a, o~ respectively. Easy to remember
-- ~Й~ went to ~AlgGr + J~ using the same phonetical principle. If I were a native Russian speaker, I would probably map it directly to ~J~, but since Serbian and other languages need ~J~, Russians will have to deal with it.
+- ~Й~ went to ~AlgGr + J~ using the same phonetic principle. If I were a native Russian speaker, I would probably map it directly to ~J~, but since Serbian and other languages need ~J~, Russians will have to deal with it.
 - ~Є~ - it went ot ~AltGr + E~, for the same phonetical reasons
 - ~Ы~ - went to ~AltGr + I~, since it's the closest sound.
 - ~Щ~ - this one was hard, since ~Ш~ already took it place, and I didn't want to introduce dead keys. As a workaround, I decided to put it to ~AltGr + R~, which is just one key left of ~Ш~ in Colemak.
-- ~Ь~ анд ~Ъ~ - this was a hard decision. There was not much keys left, and I didn't want to remap symbols. First I wanted to map them to latin ~b~ and ~B~, since they are similar visually, but then I realised I actually need for different states, since both soft and hard marking have a small and a capital letter version. In the end, i decided to map them to ~AltGr + Q~ and ~AltGr + W~, since they are free, next to each other. May not be the best choice, but couldn't find a better place withoud breaking the core principle of no symbol override and no dead keys.
+- ~Ь~ анд ~Ъ~ - this was a hard decision. There was not much keys left, and I didn't want to remap symbols. First I wanted to map them to Latin ~b~ and ~B~, since they are similar visually, but then I realised I actually need for different states, since both soft and hard marking have a small and a capital letter version. In the end, i decided to map them to ~AltGr + Q~ and ~AltGr + W~, since they are free, next to each other. May not be the best choice, but couldn't find a better place withoud breaking the core principle of no symbol override and no dead keys.
 
 ** Bulgarian
 
-After finishing with Russian, I realised Bulgarian is also supported without having to do anything extra, since there are no extra letters in Bulgarian that are not already comvered.
+After finishing with Russian, I realised Bulgarian is also supported without having to do anything extra, since there are no extra letters in Bulgarian that are not already covered.
 
 ** Macedonian
 
-That was easy too. Since I alreday added ~Ѕ~ in Serbian, there were only two letters left to support, which map pretty well to the phonetic principle.
+That was easy too. Since I already added ~Ѕ~ in Serbian, there were only two letters left to support, which map pretty well to the phonetic principle.
 
 - ~Ѓ~ mapped to ~AltGr + G~
 - ~Ќ~ mapped to ~AltGr + K~
 
-** Others
+** Others Languages
 
-I'm open to add mappings for other cyrillic languages, given that the same princples are followed, and that it doesn't require changes to the existing languages.
+I'm open to adding mappings for other Cyrillic languages, given that the same principles are followed, and that it doesn't require changes of the mappings to the existing languages.
 
-** Screenshots
+* Other platforms
+
+I would also be happy to receive a pull request to get the same difinition under Linux.
+
+* Screenshots
 
 Here's how the layout actually looks like. For brevity only capital letters, small letters are located at the same position.
 
 [[SR_ColemShft.jpg]]
 [[SR_ColemShftAltGr.jpg]]
-
