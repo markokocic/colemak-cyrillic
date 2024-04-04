@@ -41,7 +41,7 @@ Russian also has some extra letters. Unlike Serbian, it has some letters that ar
 
 - ~Ю, Я, Ё~ - it became ~AltGr~ + ~u, a, o~ respectively. Easy to remember
 - ~Й~ went to ~AlgGr + J~ using the same phonetic principle. If I were a native Russian speaker, I would probably map it directly to ~J~, but since Serbian and other languages need ~J~, Russians will have to deal with it.
-- ~Є~ - it went ot ~AltGr + E~, for the same phonetical reasons
+- ~Э~ - it went ot ~AltGr + E~, for the same phonetical reasons
 - ~Ы~ - went to ~AltGr + I~, since it's the closest sound.
 - ~Щ~ - this one was hard, since ~Ш~ already took it place, and I didn't want to introduce dead keys. As a workaround, I decided to put it to ~AltGr + R~, which is just one key left of ~Ш~ in Colemak.
 - ~Ь~ анд ~Ъ~ - this was a hard decision. There was not much keys left, and I didn't want to remap symbols. First I wanted to map them to Latin ~b~ and ~B~, since they are similar visually, but then I realised I actually need for different states, since both soft and hard marking have a small and a capital letter version. In the end, i decided to map them to ~AltGr + Q~ and ~AltGr + W~, since they are free, next to each other. May not be the best choice, but couldn't find a better place withoud breaking the core principle of no symbol override and no dead keys.
