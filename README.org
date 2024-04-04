@@ -69,5 +69,5 @@ I would also be happy to receive a pull request to get the same difinition under
 
 Here's how the layout actually looks like. For brevity only capital letters, small letters are located at the same position.
 
-[[SR_ColemShft.jpg]]
-[[SR_ColemShftAltGr.jpg]]
+[[CyrColemShft.jpg]]
+[[CyrColemShftAltGr.jpg]]
